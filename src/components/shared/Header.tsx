@@ -1,13 +1,16 @@
 import React from "react";
+import Link from "next/link";
+
+import { cn } from "@/lib/utils";
+import { Icons } from "@/components/icons";
 import {
   NavigationMenu,
   NavigationMenuContent,
-  NavigationMenuIndicator,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  NavigationMenuViewport,
+  navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 
 const Header = () => {
