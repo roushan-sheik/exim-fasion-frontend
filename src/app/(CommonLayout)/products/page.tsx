@@ -16,27 +16,32 @@ const Products = () => {
     setSearchValue(event.target.value);
   };
 
-  // Handle category select changes and trigger an API call
+  // Handle category select changes and reset other selects
   const handleForMenChange = (value: string) => {
     setSelectedForMen(value);
+    setSelectedForWomen(""); // Reset "For Women" select when "For Men" changes
+    setSelectedForKids(""); // Reset "For Kids" select when "For Men" changes
     apiCall(value); // Trigger API call immediately after selecting "For Men"
   };
 
   const handleForWomenChange = (value: string) => {
     setSelectedForWomen(value);
+    setSelectedForMen(""); // Reset "For Men" select when "For Women" changes
+    setSelectedForKids(""); // Reset "For Kids" select when "For Women" changes
     apiCall(value); // Trigger API call immediately after selecting "For Women"
   };
 
   const handleForKidsChange = (value: string) => {
     setSelectedForKids(value);
+    setSelectedForMen(""); // Reset "For Men" select when "For Kids" changes
+    setSelectedForWomen(""); // Reset "For Women" select when "For Kids" changes
     apiCall(value); // Trigger API call immediately after selecting "For Kids"
   };
 
-  //* Function to make API request with a query
+  // Function to make API request with a query
   const apiCall = (query: string) => {
-    alert(`API Request with query: ${query}`);
     console.log("API Request with query:", query);
-    //TODO: Replace this with actual API call logic
+    // Replace this with actual API call logic
   };
 
   // Debounce function for the search input to make API call after 2 seconds
@@ -44,7 +49,7 @@ const Products = () => {
     if (searchValue === "") return; // Don't make request if input is empty
     const delayDebounceFn = setTimeout(() => {
       apiCall(searchValue); // Make API request after delay
-    }, 2000); // 2-second delay
+    }, 1500); // 2-second delay
 
     return () => clearTimeout(delayDebounceFn); // Cleanup timeout if input changes
   }, [searchValue]); // Dependency on searchValue
@@ -53,8 +58,17 @@ const Products = () => {
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault(); // Prevent the default form submission behavior
     console.log("Form submitted with search value:", searchValue);
-    alert(`API Request with query: ${searchValue}`);
-    //TODO: Optionally, make an API request here on form submit
+    console.log("Selected For Men:", selectedForMen);
+    console.log("Selected For Women:", selectedForWomen);
+    console.log("Selected For Kids:", selectedForKids);
+
+    // Reset the select values after form submission
+    setSelectedForMen(""); // Reset For Men select
+    setSelectedForWomen(""); // Reset For Women select
+    setSelectedForKids(""); // Reset For Kids select
+    setSearchValue("");
+
+    // Optionally, make an API request here on form submit
   }
 
   return (
