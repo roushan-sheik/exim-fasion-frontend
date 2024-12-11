@@ -5,6 +5,38 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
+.text_pri {
+  color: #f89820;
+}
+.bg_pri {
+  background-color: #f89820;
+}
+.text_hover:hover {
+  /* color: #f8961b; */
+  color: #f89820;
+  transition: ease-in;
+}
+.bg_hover:hover {
+  /* color: #f8961b; */
+  background-color: #f89820 !important;
+  transition: ease-in;
+}
+.text_sec {
+  color: #2053f8;
+}
+.bg_sec {
+  background-color: #2053f8;
+}
+.text_hover_sec:hover {
+  /* color: #f8961b; */
+  color: #2053f8;
+  transition: ease-in;
+}
+.bg_hover_sec:hover {
+  /* color: #f8961b; */
+  background-color: #f89820 !important;
+  transition: ease-in;
+}
 
 @layer base {
   :root {

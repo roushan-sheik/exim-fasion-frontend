@@ -6,7 +6,7 @@ const HomeLoayout = ({ children }: Readonly<{ children: React.ReactNode }>) => {
   return (
     <div>
       <Header />
-      {children}
+      <div className="lg:w-10/12 md:w-full mx-auto">{children}</div>
       <Footer />
     </div>
   );
