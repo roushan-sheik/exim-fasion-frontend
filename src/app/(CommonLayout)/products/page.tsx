@@ -73,13 +73,13 @@ const Products = () => {
 
   return (
     <div className="w-full">
-      <h2 className="lg:text-4xl text-2xl my-6 font-semibold text-center">
+      <h2 className="lg:text-4xl text-2xl lg:my-6 my-4 font-semibold text-center">
         Products
       </h2>
       <form onSubmit={handleSubmit}>
-        <div className="bg_pri p-2 flex flex-col gap-3 lg:gap-0 lg:flex-row w-full justify-between items-center rounded-md">
+        <div className="bg_pri lg:p-2 px-2 py-4 flex flex-col gap-3 lg:gap-0 lg:flex-row w-full justify-between items-center rounded-md">
           {/* Category select options */}
-          <div className="flex items-center flex-col lg:flex-row flex-1 gap-2">
+          <div className="flex lg:w-[180px] w-full items-center flex-col lg:flex-row flex-1 lg:gap-2 gap-3">
             <EximSelect
               title={"For Men"}
               categoryProducts={for_men}
@@ -99,8 +99,8 @@ const Products = () => {
               onValueChange={handleForKidsChange} // Handling value change for For Kids
             />
           </div>
-          {/* Search box */}
-          <div className="flex-1 lg:ml-4 pl-4 w-[400px] flex items-center justify-between rounded-[30px] p-1 bg-white">
+          {/* Search box ================>*/}
+          <div className="flex-1 lg:ml-4 pl-4 lg:w-[400px] w-full flex items-center justify-between rounded-[30px] p-1 bg-white">
             <input
               className="active:outline-none lg:min-w-[300px] outline-none ring-0"
               type="text"
