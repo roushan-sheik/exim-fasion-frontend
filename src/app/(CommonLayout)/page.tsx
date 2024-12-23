@@ -1,10 +1,10 @@
-import { Button } from "@/components/ui/button";
+import Slider from "@/components/home/Slider";
 import React from "react";
 
 const Home = () => {
   return (
     <div>
-      <Button>Home</Button>
+      <Slider />
     </div>
   );
 };
