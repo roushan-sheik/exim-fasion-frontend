@@ -15,7 +15,11 @@ import { slidersData } from "../../../public/home/data";
 import EximButton from "../ui/eximfashion/EximButton";
 
 // If loading a variable font, you don't need to specify the font weight
-const inter = Concert_One({ weight: "400" });
+const inter = Concert_One({
+  weight: "400",
+  preload: false,
+  subsets: ["latin", "latin-ext"],
+});
 const roboto = Roboto({
   subsets: ["latin"],
   weight: ["400", "700"],
