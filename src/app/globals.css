@@ -25,7 +25,7 @@ body {
   color: #2053f8;
 }
 .bg_sec {
-  background-color: #2053f8;
+  background-color: rgb(33, 83, 247);
 }
 .text_hover_sec:hover {
   /* color: #f8961b; */

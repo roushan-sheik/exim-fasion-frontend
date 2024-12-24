@@ -18,7 +18,7 @@ const EximButton: React.FC<EximButtonProps> = ({
     <Button
       type={type}
       onClick={onClick}
-      className={`bg-[#2053f8] hover:bg-[#3469fb] ${className}`}
+      className={`${className} bg-[#2053f8] hover:bg-[#3469fb] `}
     >
       {children}
     </Button>
