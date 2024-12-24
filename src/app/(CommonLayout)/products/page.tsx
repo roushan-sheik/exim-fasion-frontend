@@ -4,6 +4,7 @@ import EximSelect from "@/components/products/EximSelect";
 import { for_kids, for_men, for_women } from "@/data/header/products";
 import React, { useState, useEffect } from "react";
 import EximButton from "@/components/ui/eximfashion/EximButton";
+import EximContainer from "@/lib/container/EximContainer";
 
 const Products = () => {
   const [searchValue, setSearchValue] = useState(""); // Search input value
@@ -72,49 +73,51 @@ const Products = () => {
   }
 
   return (
-    <div className="w-full">
-      <h2 className="lg:text-4xl text-2xl lg:my-6 my-4 font-semibold text-center">
-        Products
-      </h2>
-      <form onSubmit={handleSubmit}>
-        <div className="bg_pri lg:p-2 p-4 flex flex-col gap-3 lg:gap-0 lg:flex-row w-full justify-between items-center rounded-md">
-          {/* Category select options */}
-          <div className="flex lg:w-[180px] w-full items-center flex-col lg:flex-row flex-1 lg:gap-2 gap-3">
-            <EximSelect
-              title={"For Men"}
-              categoryProducts={for_men}
-              selectedValue={selectedForMen}
-              onValueChange={handleForMenChange} // Handling value change for For Men
-            />
-            <EximSelect
-              title={"For Women"}
-              categoryProducts={for_women}
-              selectedValue={selectedForWomen}
-              onValueChange={handleForWomenChange} // Handling value change for For Women
-            />
-            <EximSelect
-              title={"For Kids"}
-              categoryProducts={for_kids}
-              selectedValue={selectedForKids}
-              onValueChange={handleForKidsChange} // Handling value change for For Kids
-            />
+    <EximContainer>
+      <div className="w-full">
+        <h2 className="lg:text-4xl text-2xl lg:my-6 my-4 font-semibold text-center">
+          Products
+        </h2>
+        <form onSubmit={handleSubmit}>
+          <div className="bg_pri lg:p-2 p-4 flex flex-col gap-3 lg:gap-0 lg:flex-row w-full justify-between items-center rounded-md">
+            {/* Category select options */}
+            <div className="flex lg:w-[180px] w-full items-center flex-col lg:flex-row flex-1 lg:gap-2 gap-3">
+              <EximSelect
+                title={"For Men"}
+                categoryProducts={for_men}
+                selectedValue={selectedForMen}
+                onValueChange={handleForMenChange} // Handling value change for For Men
+              />
+              <EximSelect
+                title={"For Women"}
+                categoryProducts={for_women}
+                selectedValue={selectedForWomen}
+                onValueChange={handleForWomenChange} // Handling value change for For Women
+              />
+              <EximSelect
+                title={"For Kids"}
+                categoryProducts={for_kids}
+                selectedValue={selectedForKids}
+                onValueChange={handleForKidsChange} // Handling value change for For Kids
+              />
+            </div>
+            {/* Search box ================>*/}
+            <div className="flex-1 lg:ml-4 pl-4 lg:w-[400px] w-full flex items-center justify-between rounded-[30px] p-1 bg-white">
+              <input
+                className="active:outline-none lg:min-w-[300px] outline-none ring-0"
+                type="text"
+                placeholder="Search..."
+                value={searchValue}
+                onChange={handleInputChange} // Update search value on input change
+              />
+              <EximButton type="submit" className="rounded-[30px]">
+                Search
+              </EximButton>
+            </div>
           </div>
-          {/* Search box ================>*/}
-          <div className="flex-1 lg:ml-4 pl-4 lg:w-[400px] w-full flex items-center justify-between rounded-[30px] p-1 bg-white">
-            <input
-              className="active:outline-none lg:min-w-[300px] outline-none ring-0"
-              type="text"
-              placeholder="Search..."
-              value={searchValue}
-              onChange={handleInputChange} // Update search value on input change
-            />
-            <EximButton type="submit" className="rounded-[30px]">
-              Search
-            </EximButton>
-          </div>
-        </div>
-      </form>
-    </div>
+        </form>
+      </div>
+    </EximContainer>
   );
 };
 

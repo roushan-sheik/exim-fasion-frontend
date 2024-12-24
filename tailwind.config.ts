@@ -9,11 +9,6 @@ export default {
   ],
   theme: {
     extend: {
-      fontFamily: {
-        sec: ["var(--font-roboto)"],
-        pri: ["var(--font-concert-one)"],
-      },
-
       colors: {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",

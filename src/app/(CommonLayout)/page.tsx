@@ -1,14 +1,14 @@
 import EximSlider from "@/components/home/EximSlider";
-import Container from "@/lib/container/Container";
+import EximContainer from "@/lib/container/EximContainer";
 import React from "react";
 
 const Home = () => {
   return (
     <div>
       <EximSlider />
-      <Container>
+      <EximContainer>
         <h2>Homepage</h2>
-      </Container>
+      </EximContainer>
     </div>
   );
 };
