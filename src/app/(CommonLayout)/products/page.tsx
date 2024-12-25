@@ -4,7 +4,6 @@ import EximSelect from "@/components/products/EximSelect";
 import { for_kids, for_men, for_women } from "@/data/header/products";
 import React, { useState, useEffect } from "react";
 import EximButton from "@/components/ui/eximfashion/EximButton";
-import EximContainer from "@/lib/container/EximContainer";
 
 const Products = () => {
   const [searchValue, setSearchValue] = useState(""); // Search input value
@@ -73,11 +72,13 @@ const Products = () => {
   }
 
   return (
-    <EximContainer>
-      <div className="w-full">
-        <h2 className="lg:text-4xl text-2xl lg:my-6 my-4 font-semibold text-center">
-          Products
-        </h2>
+    <div className="main_container">
+      <div className="">
+        <div>
+          <h2 className="lg:text-4xl text-2xl lg:my-6 my-4 font-semibold text-center">
+            Products
+          </h2>
+        </div>
         <form onSubmit={handleSubmit}>
           <div className="bg_pri lg:p-2 p-4 flex flex-col gap-3 lg:gap-0 lg:flex-row w-full justify-between items-center rounded-md">
             {/* Category select options */}
@@ -117,7 +118,7 @@ const Products = () => {
           </div>
         </form>
       </div>
-    </EximContainer>
+    </div>
   );
 };
 

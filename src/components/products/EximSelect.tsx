@@ -22,7 +22,7 @@ const EximSelect = ({
 }) => {
   return (
     <Select value={selectedValue} onValueChange={onValueChange}>
-      <SelectTrigger className="w-full bg-none active:border-none focus:border-none">
+      <SelectTrigger className="w-full bg-none ">
         <SelectValue placeholder={title} />
       </SelectTrigger>
       <SelectContent>

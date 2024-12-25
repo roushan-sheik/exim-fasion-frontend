@@ -5,7 +5,9 @@ import React from "react";
 const HomeLayout = ({ children }: Readonly<{ children: React.ReactNode }>) => {
   return (
     <div>
-      <Header />
+      <div className=" lg:flex hidden">
+        <Header />
+      </div>
       <div>{children}</div>
       <Footer />
     </div>

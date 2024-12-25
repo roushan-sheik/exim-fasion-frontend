@@ -38,6 +38,16 @@ body {
   transition: ease-in;
 }
 
+.main_container {
+  width: 100%; /* w-full */
+  margin: 0 auto; /* mx-auto */
+
+  /* For larger screens (lg breakpoint) */
+  @media (min-width: 1024px) {
+    width: 81%; /* lg:w-[81%] */
+  }
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
