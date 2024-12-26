@@ -1,7 +1,7 @@
 "use client";
 
 import EximSelect from "@/components/products/EximSelect";
-import { for_kids, for_men, for_women } from "@/data/header/products";
+import { for_kids, for_men, for_women } from "@/data/header/products.data";
 import React, { useState, useEffect } from "react";
 import EximButton from "@/components/ui/eximfashion/EximButton";
 
