@@ -72,7 +72,7 @@ const Products = () => {
   }
 
   return (
-    <div className="main_container">
+    <div className="main_container min-h-screen">
       <div className="">
         <div>
           <h2 className="lg:text-4xl text-2xl lg:my-6 my-4 font-semibold text-center">
