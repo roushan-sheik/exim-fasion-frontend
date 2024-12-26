@@ -7,8 +7,9 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
-import { slidersData } from "../../../public/home/data";
 import EximButton from "../ui/eximfashion/EximButton";
+import { slidersData } from "@/constants.data/home/slider.data";
+import { ISlider } from "@/constants.data/home/interface";
 
 const inter = Concert_One({
   weight: "400",
@@ -38,8 +39,8 @@ const EximSlider = () => {
         modules={[Autoplay, Pagination, Navigation, Virtual]}
         className="mySwiper"
       >
-        {slidersData.map((slide, index) => (
-          <SwiperSlide key={index}>
+        {slidersData.map((slide: ISlider) => (
+          <SwiperSlide key={slide.id}>
             <div
               style={{
                 backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(32, 83, 248, 0.2)), url(${slide.image})`,

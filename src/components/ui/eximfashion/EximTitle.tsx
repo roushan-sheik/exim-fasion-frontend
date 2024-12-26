@@ -8,7 +8,7 @@ const EximTitle = ({
   description: string | false;
 }) => {
   return (
-    <div className="my-8 lg:my-20 px-4">
+    <div className="mt-10 mb-6 lg:mt-20 lg:mb-12 px-4">
       <h2 className="text-3xl text_b_pri lg:text-5xl text-center font-medium">
         {title}
       </h2>

@@ -1,6 +1,6 @@
 "use client";
-import { IPage } from "@/data/header/header.interface";
-import { pages } from "@/data/header/route.data";
+import { IPage } from "@/constants.data/header/interface";
+import { pages } from "@/constants.data/header/route.data";
 import Link from "next/link";
 import React, { useState } from "react";
 import { Roboto } from "next/font/google";

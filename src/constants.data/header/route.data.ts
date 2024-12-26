@@ -1,4 +1,4 @@
-import { IPage } from "./header.interface";
+import { IPage } from "./interface";
 import { FaHome } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
 import { IoShirtSharp } from "react-icons/io5";

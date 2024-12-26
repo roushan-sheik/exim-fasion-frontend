@@ -2,8 +2,8 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { pages } from "@/data/header/route.data";
-import { IPage } from "@/data/header/header.interface";
+import { pages } from "@/constants.data/header/route.data";
+import { IPage } from "@/constants.data/header/interface";
 import MobileNav from "./MobileNav";
 import { Roboto } from "next/font/google";
 
