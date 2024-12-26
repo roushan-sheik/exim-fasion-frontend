@@ -18,12 +18,15 @@ const Header = () => {
     <div className="shadow-md w-full   py-2 lg:px-8 px-4 flex justify-between items-center  ">
       {/* logo container =====================> */}
       <div>
-        <Image
-          src={"/assets/logo.png"}
-          width={100}
-          height={80}
-          alt="Exim Fashion"
-        />
+        <Link href={"/"}>
+          <Image
+            className="cursor-pointer"
+            src={"/assets/logo.png"}
+            width={100}
+            height={80}
+            alt="Exim Fashion"
+          />
+        </Link>
       </div>
       {/* Navigation Menu for small Devices ====================> */}
       <div className="lg:hidden block">
@@ -36,7 +39,7 @@ const Header = () => {
             return (
               <li
                 key={page.id}
-                className={`hover:text[#F8961B] ${roboto.className} p-2 text_hover`}
+                className={`hover:text[#F8961B] cursor-pointer ${roboto.className} p-2 text_hover`}
               >
                 <Link href={page.route}>{page.name}</Link>
               </li>
