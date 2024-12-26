@@ -15,7 +15,7 @@ const roboto = Roboto({
 
 const Header = () => {
   return (
-    <div className="shadow-md  py-2 lg:px-8 px-4 flex justify-between items-center  ">
+    <div className="shadow-md w-full   py-2 lg:px-8 px-4 flex justify-between items-center  ">
       {/* logo container =====================> */}
       <div>
         <Image

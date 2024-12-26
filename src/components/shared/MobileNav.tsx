@@ -31,7 +31,7 @@ const MobileNav = () => {
       {/* list box */}
       <div className="relative">
         <ul
-          className={`flex flex-col gap-2 absolute pt-2 top-[16px] px-4 pb-2 z-[100] h-screen w-[260px] bg-black bg-opacity-40 backdrop-blur-md shadow-lg
+          className={`flex flex-col gap-2 absolute pt-2 top-[14px] px-4 pb-2 z-[100] h-screen w-[260px] bg-black bg-opacity-40 backdrop-blur-md shadow-lg
             transition-all duration-400 ${
               toggle ? "left-[-200px] opacity-100" : "right-[-300px] opacity-0"
             }`}

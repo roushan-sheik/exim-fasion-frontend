@@ -4,11 +4,11 @@ import React from "react";
 
 const HomeLayout = ({ children }: Readonly<{ children: React.ReactNode }>) => {
   return (
-    <>
+    <div>
       <Header />
       <div>{children}</div>
       <Footer />
-    </>
+    </div>
   );
   <Footer />;
 };
