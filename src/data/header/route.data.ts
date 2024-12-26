@@ -3,8 +3,7 @@ import { FaHome } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
 import { IoShirtSharp } from "react-icons/io5";
 import { FaUsers } from "react-icons/fa";
-import { FaSquarePhone } from "react-icons/fa6";
-
+import { MdAttachEmail } from "react-icons/md";
 export const pages: IPage[] = [
   {
     id: 1,
@@ -34,6 +33,6 @@ export const pages: IPage[] = [
     id: 5,
     name: "Contacts",
     route: "/contacts",
-    icon: FaSquarePhone,
+    icon: MdAttachEmail,
   },
 ];

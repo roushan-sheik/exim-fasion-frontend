@@ -1,4 +1,5 @@
 import EximSlider from "@/components/home/EximSlider";
+import WhatDefineUs from "@/components/home/WhatDefineUs";
 
 import React from "react";
 
@@ -7,7 +8,8 @@ const Home = () => {
     <div>
       <EximSlider />
       <div className=" main_container">
-        <h2>Homepage</h2>
+        {/* What define us section  */}
+        <WhatDefineUs />
       </div>
     </div>
   );

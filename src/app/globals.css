@@ -5,9 +5,17 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
+.text_b_pri {
+  color: #050a30;
+}
+.text_b_sec {
+  color: #4c585b;
+}
+
 .text_pri {
   color: #f89820;
 }
+
 .bg_pri {
   background-color: #f89820;
 }

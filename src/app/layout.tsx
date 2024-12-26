@@ -1,17 +1,14 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
 import Providers from "@/lib/providers/Providers";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+import { Roboto } from "next/font/google";
+
+const roboto = Roboto({
+  subsets: ["latin"],
+  weight: ["100", "400", "500", "700", "900"],
+  preload: false, // Disable preloading
+  variable: "--roboto-font",
 });
 
 export const metadata: Metadata = {
@@ -27,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`max-w-[1680px]  w-full mx-auto ${geistSans.variable} ${geistMono.variable} antialiased `}
+        className={`max-w-[1680px] w-full mx-auto ${roboto.className} antialiased `}
       >
         <Providers>{children}</Providers>
       </body>
