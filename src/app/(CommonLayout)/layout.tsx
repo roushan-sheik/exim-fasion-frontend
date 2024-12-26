@@ -4,7 +4,7 @@ import React from "react";
 
 const HomeLayout = ({ children }: Readonly<{ children: React.ReactNode }>) => {
   return (
-    <div>
+    <div className="overflow-hidden">
       <Header />
       <div>{children}</div>
       <Footer />

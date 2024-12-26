@@ -19,7 +19,7 @@ const MobileNav = () => {
     setToggle(!toggle);
   };
   return (
-    <div>
+    <div className="">
       {/* toggle box */}
       <div>
         {toggle ? (

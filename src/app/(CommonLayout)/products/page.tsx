@@ -80,7 +80,7 @@ const Products = () => {
           </h2>
         </div>
         <form onSubmit={handleSubmit}>
-          <div className="bg_pri lg:p-2 p-4 flex flex-col gap-3 lg:gap-0 lg:flex-row w-full justify-between items-center rounded-md">
+          <div className="bg_pri lg:p-2 p-4 flex flex-col gap-3 lg:gap-0 lg:flex-row w-full justify-between items-center lg:rounded-md">
             {/* Category select options */}
             <div className="flex lg:w-[180px] w-full items-center flex-col lg:flex-row flex-1 lg:gap-2 gap-3">
               <EximSelect
