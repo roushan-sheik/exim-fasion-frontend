@@ -6,15 +6,17 @@ import { IDefine } from "@/constants.data/home/interface";
 
 const WhatDefineUs = () => {
   return (
-    <div>
-      <EximTitle
-        title="Our Story and Mission"
-        description="Discover Exim Fashion Bangladesh – a leading garment exporter since 2014. Learn about who we are, our unwavering goal to stay customer-focused, and the journey of excellence through our activities in the fashion industry."
-      />
+    <div className="">
+      <div className="main_container">
+        <EximTitle
+          title="Our Story and Mission"
+          description="Discover Exim Fashion Bangladesh – a leading garment exporter since 2014. Learn about who we are, our unwavering goal to stay customer-focused, and the journey of excellence through our activities in the fashion industry."
+        />
+      </div>
       {/* container  */}
-      <div className="flex flex-col lg:flex-row border-t-2 border-b-2 lg:items-center ">
+      <div className="flex flex-col lg:flex-row  py-8  lg:items-center bg-gradient-to-r from-[#90c5ff] to-[#c7e2ff] ">
         {/* box 1  */}
-        <div className="basis-[40%] p-4">
+        <div className="basis-[40%] lg:p-8 p-4">
           <Image src={"/assets/goal.png"} width={500} height={200} alt="" />
         </div>
         {/* box 2  */}
